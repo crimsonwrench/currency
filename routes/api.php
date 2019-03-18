@@ -12,4 +12,6 @@
 |
 */
 
-Route::get('/{firstCurrency}/{secondCurrency}', 'CurrencyController@fetch');
+Route::group(['namespace' => 'Api'], function () {
+    Route::get('/{firstCurrency}/{secondCurrency}', 'CurrencyController@fetch');
+});
